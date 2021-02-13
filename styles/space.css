@@ -1,0 +1,22 @@
+svg {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 100;
+}
+
+.headline {
+  font-size: 3.7rem;
+}
+
+.strapline,
+.strapline-two,
+.strapline-three {
+  font-size: 0.9rem;
+}
+
+.space-alien {
+  transform: scale(0.5);
+}
+
+.space-planet {
+  transform-origin: 20% center;
+}
