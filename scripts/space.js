@@ -12,6 +12,25 @@ const star002 = document.getElementById('star-002');
 const star003 = document.getElementById('star-003');
 const star004 = document.getElementById('star-004');
 
+gsap.set(
+  [
+    headline,
+    strapline,
+    straplineTwo,
+    straplineThree,
+    ship,
+    planet,
+    alien,
+    star001,
+    star002,
+    star003,
+    star004,
+  ],
+  {
+    autoAlpha: 0,
+  },
+);
+
 const headlineReveal = () => {
   const tl = gsap.timeline();
   tl.fromTo(
@@ -122,8 +141,9 @@ const planetSpin = () => {
       x: 435,
       y: 50,
       rotate: 0,
-      duration: 5,
+      duration: 6,
       ease: 'power3.inOut',
+      autoAlpha: 1,
     },
   );
   return tl;
@@ -243,16 +263,16 @@ const master = gsap.timeline({ repeat: 0 });
 master.add(shootingStar());
 
 // Planet spin
-master.add(planetSpin(), '-=5');
+master.add(planetSpin(), '-=4');
 
 // Text
 master.add(headlineReveal(), '-=3');
-master.add(straplineReveal(), '+=1');
-master.add(straplineTwoReveal(), '+=1');
-master.add(straplineThreeReveal(), '+=1');
+master.add(straplineReveal(), '+=0.5');
+master.add(straplineTwoReveal(), '+=0.5');
+master.add(straplineThreeReveal(), '+=0.5');
 
 // Ship in
-master.add(shipLand(), '-=9');
+master.add(shipLand(), '-=8');
 
 // Alien pop up
 master.add(alienPop(), '+=2');
