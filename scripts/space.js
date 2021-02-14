@@ -275,4 +275,4 @@ master.add(straplineThreeReveal(), '+=0.5');
 master.add(shipLand(), '-=8');
 
 // Alien pop up
-master.add(alienPop(), '+=2');
+master.add(alienPop());

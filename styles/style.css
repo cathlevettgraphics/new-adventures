@@ -178,6 +178,7 @@ a:hover {
 .into-text-block {
   grid-column-start: 4 span;
   font-size: 1.4rem;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -202,7 +203,7 @@ a:hover {
   align-items: center;
   padding: 10px 20px;
   width: 100vw;
-  border-block-start: 2px solid #333;
+  border-block-start: 1.5px solid #333;
   font-size: 1.4rem;
 }
 

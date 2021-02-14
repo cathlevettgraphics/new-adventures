@@ -4,13 +4,27 @@ svg {
 }
 
 .headline {
-  font-size: 3.7rem;
+  font-size: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .headline {
+    font-size: 3.7rem;
+  }
 }
 
 .strapline,
 .strapline-two,
 .strapline-three {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
+}
+
+@media (min-width: 1024px) {
+  .strapline,
+  .strapline-two,
+  .strapline-three {
+    font-size: 0.9rem;
+  }
 }
 
 .space-alien {
