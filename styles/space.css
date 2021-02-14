@@ -20,3 +20,7 @@ svg {
 .space-planet {
   transform-origin: 20% center;
 }
+
+.star {
+  transform: scale(0.1);
+}

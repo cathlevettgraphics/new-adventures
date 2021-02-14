@@ -1,11 +1,16 @@
-const headline = document.getElementById("headline");
-const strapline = document.getElementById("strapline");
-const straplineTwo = document.getElementById("strapline-two");
-const straplineThree = document.getElementById("strapline-three");
+const headline = document.getElementById('headline');
+const strapline = document.getElementById('strapline');
+const straplineTwo = document.getElementById('strapline-two');
+const straplineThree = document.getElementById('strapline-three');
 
-const ship = document.getElementById("space-ship");
-const planet = document.getElementById("space-planet");
-const alien = document.getElementById("space-alien");
+const ship = document.getElementById('space-ship');
+const planet = document.getElementById('space-planet');
+const alien = document.getElementById('space-alien');
+
+const star001 = document.getElementById('star-001');
+const star002 = document.getElementById('star-002');
+const star003 = document.getElementById('star-003');
+const star004 = document.getElementById('star-004');
 
 const headlineReveal = () => {
   const tl = gsap.timeline();
@@ -14,12 +19,14 @@ const headlineReveal = () => {
     {
       x: 40,
       y: 255,
+      autoAlpha: 0,
     },
     {
       x: 40,
       y: -95,
       duration: 2,
-      ease: "back.inOut(1.7)",
+      ease: 'back.inOut(1.7)',
+      autoAlpha: 1,
     },
   );
   return tl;
@@ -59,7 +66,6 @@ const straplineTwoReveal = () => {
       y: -75,
       duration: 1.2,
       autoAlpha: 1,
-      // ease: 'back.inOut(3)',
     },
   );
   return tl;
@@ -79,7 +85,6 @@ const straplineThreeReveal = () => {
       y: -60,
       duration: 1.2,
       autoAlpha: 1,
-      // ease: 'back.inOut(1.7)',
     },
   );
   return tl;
@@ -95,7 +100,7 @@ const shipLand = () => {
       y: -600,
     },
     {
-      ease: "circ.inOut",
+      ease: 'circ.inOut',
       x: 370,
       y: 10,
       duration: 3,
@@ -118,7 +123,7 @@ const planetSpin = () => {
       y: 50,
       rotate: 0,
       duration: 5,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     },
   );
   return tl;
@@ -138,7 +143,95 @@ const alienPop = () => {
       y: 185,
       autoAlpha: 1,
       duration: 1,
-      ease: "back.inOut(3)",
+      ease: 'back.inOut(3)',
+    },
+  );
+  return tl;
+};
+
+const starA = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    star001,
+    {
+      x: 100,
+      y: 160,
+      autoAlpha: 0.5,
+    },
+    {
+      x: 100,
+      y: 160,
+      autoAlpha: 0.1,
+      duration: 1.5,
+      repeat: -1,
+      repeatDelay: 2,
+      ease: 'bounce.out',
+    },
+  );
+  return tl;
+};
+starA();
+
+const starB = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    star002,
+    {
+      x: 190,
+      y: 190,
+      autoAlpha: 0.5,
+    },
+    {
+      x: 190,
+      y: 190,
+      autoAlpha: 0.1,
+      duration: 1.5,
+      repeat: -1,
+      repeatDelay: 2.5,
+      ease: 'back.out(1.7)',
+    },
+  );
+  return tl;
+};
+starB();
+
+const starC = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    star003,
+    {
+      x: 320,
+      y: 130,
+      autoAlpha: 0.6,
+    },
+    {
+      x: 320,
+      y: 130,
+      autoAlpha: 0.1,
+      duration: 2,
+      repeat: -1,
+      repeatDelay: 3,
+      ease: 'elastic.out(1, 0.3)',
+    },
+  );
+  return tl;
+};
+starC();
+
+const shootingStar = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    star004,
+    {
+      x: -10,
+      y: -10,
+      autoAlpha: 1,
+    },
+    {
+      x: 240,
+      y: 180,
+      autoAlpha: 0,
+      duration: 3,
     },
   );
   return tl;
@@ -146,17 +239,20 @@ const alienPop = () => {
 
 const master = gsap.timeline({ repeat: 0 });
 
+// Stars
+master.add(shootingStar());
+
 // Planet spin
-master.add(planetSpin());
+master.add(planetSpin(), '-=5');
 
 // Text
-master.add(headlineReveal(), "-=3");
-master.add(straplineReveal(), "+=1");
-master.add(straplineTwoReveal(), "+=1");
-master.add(straplineThreeReveal(), "+=1");
+master.add(headlineReveal(), '-=3');
+master.add(straplineReveal(), '+=1');
+master.add(straplineTwoReveal(), '+=1');
+master.add(straplineThreeReveal(), '+=1');
 
 // Ship in
-master.add(shipLand(), "-=9");
+master.add(shipLand(), '-=9');
 
 // Alien pop up
-master.add(alienPop(), "+=2");
+master.add(alienPop(), '+=2');
