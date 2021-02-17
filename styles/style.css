@@ -68,16 +68,28 @@ a:hover {
   color: #de4cc9;
 }
 
-/* Animations in header block */
+/* Header block */
 .container-main.main-image-animation {
   position: relative;
   height: 281px;
   margin-block-end: 30px;
 }
 
+@media (min-width: 576px) {
+  .container-main.main-image-animation {
+    height: 433px;
+  }
+}
+
 @media (min-width: 768px) {
   .container-main.main-image-animation {
     height: 575px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-main.main-image-animation {
+    height: 745px;
   }
 }
 
@@ -87,8 +99,27 @@ a:hover {
   }
 }
 
+@media (min-width: 1200px) {
+  .container-main.main-image-animation {
+    height: 900px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-main.main-image-animation {
+    height: 1050px;
+  }
+}
+
+/* Animations in header block */
 .header-animation {
   height: 281px;
+}
+
+@media (min-width: 576px) {
+  .header-animation {
+    height: 433px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -97,9 +128,27 @@ a:hover {
   }
 }
 
+@media (min-width: 992px) {
+  .header-animation {
+    height: 745px;
+  }
+}
+
 @media (min-width: 1024px) {
   .header-animation {
     height: 770px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-animation {
+    height: 900px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-animation {
+    height: 1050px;
   }
 }
 

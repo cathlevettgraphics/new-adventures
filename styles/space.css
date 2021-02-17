@@ -27,14 +27,14 @@ svg {
   }
 }
 
-.space-alien {
+/* .space-alien {
   transform: scale(0.5);
-}
+} */
 
-.space-planet {
+/* .space-planet {
   transform-origin: 20% center;
-}
+} */
 
-.star {
+/* .star {
   transform: scale(0.1);
-}
+} */
