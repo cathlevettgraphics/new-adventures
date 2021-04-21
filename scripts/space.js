@@ -1,16 +1,16 @@
-const headline = document.getElementById("headline");
-const strapline = document.getElementById("strapline");
-const straplineTwo = document.getElementById("strapline-two");
-const straplineThree = document.getElementById("strapline-three");
+const headline = document.getElementById('headline');
+const strapline = document.getElementById('strapline');
+const straplineTwo = document.getElementById('strapline-two');
+const straplineThree = document.getElementById('strapline-three');
 
-const ship = document.getElementById("space-ship");
-const planet = document.getElementById("space-planet");
-const alien = document.getElementById("space-alien");
+const ship = document.getElementById('space-ship');
+const planet = document.getElementById('space-planet');
+const alien = document.getElementById('space-alien');
 
-const star001 = document.getElementById("star-001");
-const star002 = document.getElementById("star-002");
-const star003 = document.getElementById("star-003");
-const star004 = document.getElementById("star-004");
+const star001 = document.getElementById('star-001');
+const star002 = document.getElementById('star-002');
+const star003 = document.getElementById('star-003');
+const star004 = document.getElementById('star-004');
 
 gsap.set(
   [
@@ -44,7 +44,7 @@ const headlineReveal = () => {
       x: 40,
       y: -95,
       duration: 2,
-      ease: "back.inOut(1.7)",
+      ease: 'back.inOut(1.7)',
       autoAlpha: 1,
     },
   );
@@ -119,7 +119,7 @@ const shipLand = () => {
       y: -600,
     },
     {
-      ease: "circ.inOut",
+      ease: 'circ.inOut',
       x: 370,
       y: 10,
       duration: 3,
@@ -137,14 +137,14 @@ const planetSpin = () => {
       y: 40,
       autoAlpha: 1,
       rotate: 0,
-      transformOrigin: "center center",
+      transformOrigin: '50% 50%',
     },
     {
       x: 430,
       y: 40,
       rotate: 360,
       duration: 180,
-      transformOrigin: "center center",
+      transformOrigin: '50% 50%',
       autoAlpha: 1,
       repeat: -1,
     },
@@ -172,7 +172,7 @@ const alienPop = () => {
       duration: 1,
       scaleX: 0.5,
       scaleY: 0.5,
-      ease: "back.inOut(3)",
+      ease: 'back.inOut(3)',
     },
   );
   return tl;
@@ -198,7 +198,7 @@ const starA = () => {
       duration: 1.5,
       repeat: -1,
       repeatDelay: 2,
-      ease: "bounce.out",
+      ease: 'bounce.out',
     },
   );
   return tl;
@@ -225,7 +225,7 @@ const starB = () => {
       duration: 1.5,
       repeat: -1,
       repeatDelay: 2.5,
-      ease: "back.out(1.7)",
+      ease: 'back.out(1.7)',
     },
   );
   return tl;
@@ -252,7 +252,7 @@ const starC = () => {
       duration: 2,
       repeat: -1,
       repeatDelay: 3,
-      ease: "elastic.out(1, 0.3)",
+      ease: 'elastic.out(1, 0.3)',
     },
   );
   return tl;
@@ -268,14 +268,14 @@ const shootingStar = () => {
       y: -10,
       scaleX: 0.1,
       scaleY: 0.1,
-      autoAlpha: 1,
+      autoAlpha: 0,
     },
     {
       x: 240,
       y: 180,
-      scaleX: 0.1,
-      scaleY: 0.1,
-      autoAlpha: 0,
+      scaleX: 0,
+      scaleY: 0,
+      autoAlpha: 1,
       duration: 3,
     },
   );
@@ -291,13 +291,13 @@ master.add(shootingStar());
 // master.add(planetSpin(), '-=4');
 
 // Text
-master.add(headlineReveal(), "-=3");
-master.add(straplineReveal(), "+=0.5");
-master.add(straplineTwoReveal(), "+=0.5");
-master.add(straplineThreeReveal(), "+=0.5");
+master.add(headlineReveal(), '-=3');
+master.add(straplineReveal(), '+=0.5');
+master.add(straplineTwoReveal(), '+=0.5');
+master.add(straplineThreeReveal(), '+=0.5');
 
 // Ship in
-master.add(shipLand(), "-=8");
+master.add(shipLand(), '-=8');
 
 // Alien pop up
 master.add(alienPop());

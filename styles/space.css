@@ -5,11 +5,13 @@ svg {
 
 .headline {
   font-size: 3.5rem;
+  visibility: hidden;
 }
 
 @media (min-width: 1024px) {
   .headline {
     font-size: 3.7rem;
+    visibility: hidden;
   }
 }
 
@@ -17,6 +19,7 @@ svg {
 .strapline-two,
 .strapline-three {
   font-size: 1.15rem;
+  visibility: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -24,17 +27,30 @@ svg {
   .strapline-two,
   .strapline-three {
     font-size: 0.9rem;
+    visibility: hidden;
   }
 }
 
-/* .space-alien {
+.space-scene {
+  visibility: visible;
+}
+
+.space-ship {
+  visibility: hidden;
+}
+
+.space-alien {
   transform: scale(0.5);
-} */
-
-/* .space-planet {
+  visibility: hidden;
+}
+.space-planet {
   transform-origin: 20% center;
-} */
-
-/* .star {
+  visibility: hidden;
+}
+.star-001,
+.star-002,
+.star-003,
+.star-004 {
   transform: scale(0.1);
-} */
+  visibility: hidden;
+}
